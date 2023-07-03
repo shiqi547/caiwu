@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>财务报表和报销流程</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    section {
+      margin: 20px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f5f5f5;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .reimbursement-link {
+      color: rgb(7, 7, 74);
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>财务报表和报销流程</h1>
+  </header>
+
+  <section>
+    <h2>财务报表</h2>
+    <table>
+      <tr>
+        <th>资产</th>
+        <th>负债</th>
+        <th>所有者权益</th>
+      </tr>
+      <tr>
+        <td>现金</td>
+        <td>应付账款</td>
+        <td>普通股</td>
+      </tr>
+      <tr>
+        <td>应收账款</td>
+        <td>应付贷款</td>
+        <td>留存收益</td>
+      </tr>
+      <tr>
+        <td>存货</td>
+        <td>...</td>
+        <td>...</td>
+      </tr>
+      <!-- 根据需要添加更多行 -->
+    </table>
+
+    <h2>报销</h2>
+    <table>
+      <tr>
+        <th>报销项类型</th>
+        <th>报销金额</th>
+        <th>提交申请</th>
+      </tr>
+      <tr>
+        <td>餐饮费</td>
+        <td>100</td>
+        <td><button onclick="submitReimbursement('餐饮费', 100)">提交</button></td>
+      </tr>
+      <tr>
+        <td>交通费</td>
+        <td>200</td>
+        <td><button onclick="submitReimbursement('交通费', 200)">提交</button></td>
+      </tr>
+      <tr>
+        <td>差旅费</td>
+        <td>300</td>
+        <td><button onclick="submitReimbursement('差旅费', 300)">提交</button></td>
+      </tr>
+      <!-- 根据需要添加更多行 -->
+    </table>
+    <h3>报销表格</h3>
+<section id="reimbursement-form" style="display: none;">
+  <h4>报销申请表格</h4>
+  <form>
+    <label for="expense-type">报销项类型:</label>
+    <input type="text" id="expense-type" readonly>
+    <br>
+    <label for="expense-amount">报销金额:</label>
+    <input type="number" id="expense-amount">
+    <br>
+    <button type="submit">提交申请</button>
+  </form>
+</section>
+
+<a href="https://docs.google.com/spreadsheets/d/15Qmpv_bQVP7J5nmJGLwJh7Ki0UdyxzZ65YxWIxwb4Xs/edit#gid=0" target="_blank">请款申请表格</a>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2023 财务报表和报销流程. 保留所有权利。</p>
+  </footer>
+
+  <script>
+    function submitReimbursement(expenseType, expenseAmount) {
+      // 在这里执行报销申请的逻辑
+      console.log('提交报销申请:', expenseType, expenseAmount);
+    }
+  </script>
+</body>
+</html>
